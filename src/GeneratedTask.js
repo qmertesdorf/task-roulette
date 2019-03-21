@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { taskCompletion } from "./api";
 
 const GeneratedTask = () => {
   
@@ -19,7 +20,7 @@ const GeneratedTask = () => {
       <h1>{currentTask.description}</h1>
       {currentTask
         ? <>
-          <button>Did it!</button>
+          <button onClick={taskCompletion}>Did it!</button>
           <button>I'll do that later...</button>
           </>
         : <button onClick={generateTask}>What should I do?</button>
