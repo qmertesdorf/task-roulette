@@ -1,6 +1,7 @@
 import openSocket from 'socket.io-client';
+import { port } from './server';
 //revisit
-const socket = openSocket('https://dashboard.heroku.com/apps/the-task-roulette:8000');
+const socket = openSocket(`https://dashboard.heroku.com/apps/the-task-roulette:${port}`);
 
 export const taskCompletion = (cb) => {
   socket.on("completionPoints", (receivesPoints) => cb(null, receivesPoints));
