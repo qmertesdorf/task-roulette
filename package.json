@@ -10,7 +10,7 @@
     "socket.io-client": "^2.2.0"
   },
   "scripts": {
-    "start": "node src/server.js && react-scripts start",
+    "start": "node src/server.js",
     "heroku-postbuild": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
