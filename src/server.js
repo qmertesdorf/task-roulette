@@ -2,7 +2,7 @@ const io = require('socket.io')();
 
 io.on('connection', (socket) => {
   socket.on('taskCompleted', (completed) => {
-    io.emit("taskCompleted", completed)
+    socket.broadcast.emit("completionPoints", completed)
     console.log('client has completed a task: ', completed)
   })
 })
